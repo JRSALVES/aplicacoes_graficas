@@ -1,4 +1,7 @@
 /* Estilização do corpo da página */
+
+
+
 body {
     background-color: black; /* Define o fundo da página como preto */
     display: flex; /* Usa Flexbox para centralizar o conteúdo */
@@ -24,7 +27,7 @@ svg {
 
 /* Animação aplicada à tampa da lixeira */
 #tampa.animated {
-    animation: abrir 1s; /* Aplica a animação 'abrir' com duração de 1s */
+    animation: abrir 1s forwards; /* Aplica a animação 'abrir' com duração de 1s */
 }
 
 /* Definição da animação de abrir a tampa */
@@ -42,4 +45,8 @@ svg {
     to {
         transform: translateY(10%); /* Move o corpo da lixeira 10% para baixo */
     }
+}
+
+.titulo {
+    color: white;
 }
