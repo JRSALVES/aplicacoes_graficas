@@ -1,0 +1,35 @@
+window.onload = function() {
+    // Definir e configurar o canvas
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    // Definir tamanho correto do canvas
+    canvas.width = 200;
+    canvas.height = 100;
+
+    // Garantir que o fundo do canvas seja branco
+    ctx.fillStyle = "#FFFFFF"; 
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Adicionar uma borda preta para destacar o branco
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+    // Círculo vermelho centralizado
+    let centerX = canvas.width / 2;
+    let centerY = canvas.height / 2;
+    let radius = 30;
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    ctx.fillStyle = "#BC002D"; // Cor vermelha da bandeira do Japão
+    ctx.fill();
+    ctx.closePath();
+
+    // Garantir que a imagem senac.png tenha o tamanho correto
+    let img = document.querySelector('section img');
+    img.style.width = '200px';  // Forçando largura
+    img.style.height = '100px'; // Forçando altura
+};
+
