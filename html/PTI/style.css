@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,78 +5,105 @@
     font-family: Arial, sans-serif;
 }
 
-/* Corpo da página */
-body {   
+body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Cabeçalho */
 header {
-    background-color: black;
-    color: white;
-    text-align: center;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
     padding: 20px;
     width: 100%;
+    box-sizing: border-box;
 }
 
-/* Layout principal com 3 colunas */
 main {
     display: flex;
-    justify-content: space-between; /* Distribui os elementos */
-    width: 80%;
-    max-width: 1000px;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    gap: 20px; /* Espaçamento entre as seções */
+    gap: 20px;
 }
 
-/* Organizando a ordem das seções */
 section {
-    flex: 1; /* Cada seção ocupa espaço igual */
+    flex: 1;
     padding: 10px;
 }
 
-/* Colocando o formulário na esquerda */
 section:nth-of-type(1) {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
 }
 
-/* Centralizando a imagem */
 section:nth-of-type(2) {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Colocando o canvas na direita */
 section:nth-of-type(3) {
     display: flex;
-    justify-content: flex-end; /* Move o canvas para a direita */
+    justify-content: flex-end;
     align-items: center;
 }
 
-/* Ajuste para garantir que o canvas fique bem posicionado */
 canvas {
-    border: 2px solid black;
+    border: 2px solid #000;
     background-color: white;
     width: 300px;
     height: 200px;
 }
 
-/* Footer */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
 footer {
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    height: 100px; /* Altura do footer */
+    justify-content: center;
+    align-items: center;
+    height: 100px;
     background-color: #333;
     color: #fff;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
